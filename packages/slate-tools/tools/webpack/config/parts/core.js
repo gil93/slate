@@ -1,5 +1,5 @@
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); //https://github.com/johnagan/clean-webpack-plugin/commit/d0e34084e20f0a0f0857d117d665f5ee8536dfa5#diff-d267fc81ff4f0d44271784a40c7819e6
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const SlateConfig = require('@shopify/slate-config');
@@ -69,9 +69,9 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(['dist'], {
-      root: config.get('paths.theme'),
-    }),
+    // https://github.com/johnagan/clean-webpack-plugin#options-and-defaults-optional
+    // https://github.com/johnagan/clean-webpack-plugin/issues/106
+    new CleanWebpackPlugin(),
 
     extractLiquidStyles,
 

@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const figures = require('figures');
-const flatten = require('array-flatten');
+const { flatten } = require('array-flatten'); //https://github.com/blakeembrey/array-flatten/issues/19#issuecomment-557318115
 const minimatch = require('minimatch');
 const {argv} = require('yargs');
 const {getIgnoreFilesValue} = require('@shopify/slate-env');

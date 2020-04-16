@@ -1,5 +1,5 @@
 const fs = require('fs');
-const uuidGenerator = require('uuid/v4');
+const { v4: uuidGenerator } = require('uuid'); //https://github.com/uuidjs/uuid/blob/master/README_js.md
 const SlateConfig = require('@shopify/slate-config');
 const config = new SlateConfig(require('./slate-rc.schema'));
 const SlateRcError = require('./slate-rc-error');
