@@ -1,4 +1,4 @@
-const uuidGenerator = require('uuid/v4');
+const { v4: uuidGenerator } = require('uuid'); //https://github.com/uuidjs/uuid/blob/master/README_js.md
 const clearConsole = require('react-dev-utils/clearConsole');
 const rc = require('@shopify/slate-rc');
 const {getUserEmail} = require('@shopify/slate-env');
